@@ -12,10 +12,10 @@ permissions:
     group: root
 hooks: 
   BeforeInstall:
-  - location: scripts/remove_backend_node
+  - location: scripts/remove_backend_node.sh
     timeout: 60
     runas: root
   ApplicationStart:
-  - location: scripts/restart_backend
+  - location: scripts/restart_backend.sh
     timeout: 60
     runas: root
