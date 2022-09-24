@@ -4,8 +4,8 @@
   "description": "A sample Node.js app using Express 4",
   "main": "index.js",
   "scripts": {
-    "start:dev-pm2": "env-cmd -f dev.env pm2 start index.js --name backend_dev",
-    "start:prod-pm2": "env-cmd -f prod.env pm2 start index.js --name backend_prod",
+    "start:dev-pm2": "env-cmd -f dev.env pm2 start index.js --name backend_dev-pm2",
+    "start:prod-pm2": "env-cmd -f prod.env pm2 start index.js --name backend_prod-pm2",
     "start:dev": "env-cmd -f dev.env node index.js"
   },
   "dependencies": {
