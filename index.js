@@ -11,7 +11,7 @@ app.get('/', function(request, response) {
 })
 
 app.get('/env', function(request, response) {
-  response.send(`ENv is : ${process.env.ENV}`)
+  response.send(`ENV is : ${process.env.ENV}`)
 })
 
 app.listen(app.get('port'), function() {

@@ -4,9 +4,8 @@
   "description": "A sample Node.js app using Express 4",
   "main": "index.js",
   "scripts": {
-    "start:dev:wind": "set ENV=Development&&node index.js",
-    "start:dev:ubuntu": "env-cmd -f dev.env node index.js",
-    "start:prod": "node index.js --prod.env"
+    "start:dev": "env-cmd -f dev.env pm2 start index.js --name backend_de",
+    "start:prod": "env-cmd -f prod.env pm2 start index.js --name backend_prod"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
