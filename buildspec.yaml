@@ -3,13 +3,13 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com
+      - aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com
      
   build:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t nginx:latest .
+      - docker build -t nginx:latest --build-arg startup_command=$ENV .
       - docker tag nginx:latest $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/nginx:latest
   post_build:
     commands:
