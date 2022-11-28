@@ -12,3 +12,4 @@ do
         # mkdir $i+"tets"
     fi
 done 
+ 
